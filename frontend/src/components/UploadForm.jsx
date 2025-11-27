@@ -39,7 +39,7 @@ export default function UploadForm(){
     console.log('FormData documentType:', fd.get('documentType'));
     
     try {
-      const res = await axios.post('http://localhost:5000/api/upload', fd, {
+      const res = await axios.post('https://idp-backend-dzfk.onrender.com/api/upload', fd, {
         headers: { 'Content-Type': 'multipart/form-data' },
         timeout: 60000 // 60 seconds for OCR processing
       })

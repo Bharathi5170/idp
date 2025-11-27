@@ -15,7 +15,7 @@ export default function DocumentViewer({ onBack }) {
   const fetchDocuments = async () => {
     try {
       setLoading(true)
-      const res = await axios.get('http://localhost:5000/api/documents')
+      const res = await axios.get('https://idp-backend-dzfk.onrender.com/api/documents')
       setDocuments(res.data.documents)
       setError(null)
     } catch (err) {
